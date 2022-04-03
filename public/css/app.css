@@ -430,11 +430,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.w-8\/12 {
+  width: 66.666667%;
+}
 .items-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;

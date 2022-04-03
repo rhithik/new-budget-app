@@ -14,7 +14,7 @@
                 <a href="#">Logo</a>
             </li>
             <li class="px-3">
-                <a href="#">Budgets</a>
+                <a href="{{ route('dashboard') }}">Budgets</a>
             </li>
         </ul>
 
