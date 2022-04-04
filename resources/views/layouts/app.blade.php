@@ -11,23 +11,33 @@
     <nav class="p-6 bg-white flex justify-between">
         <ul class="flex items-center">
             <li class="px-3">
-                <a href="#">Logo</a>
+                <a href="{{ route('budgets') }}">Logo</a>
             </li>
             <li class="px-3">
-                <a href="{{ route('dashboard') }}">Budgets</a>
+                <a href="{{ route('budgets') }}">Budgets</a>
             </li>
         </ul>
 
         <ul class="flex items-center">
-            <li class="px-3">
-                <a href="#">User/Username</a>
-            </li>
-            <li class="px-3">
-                <a href="#">Login</a>
-            </li>
-            <li class="px-3">
-                <a href="#">Register</a>
-            </li>
+            @auth
+                <li class="px-3">
+                    <a href="#">User/Username</a>
+                </li>
+                <li class="px-3">
+                    <form action="" class="p-3 inline">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            @endauth
+            
+            @guest
+                <li class="px-3">
+                    <a href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="px-3">
+                    <a href="{{ route('register') }}">Register</a>
+                </li>
+            @endguest
         </ul>
     </nav>
     <h2 class="md:text-2xl xl:text-3xl font-bold mt-6 text-center underline">
