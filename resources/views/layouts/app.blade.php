@@ -11,20 +11,21 @@
     <nav class="p-6 bg-white flex justify-between">
         <ul class="flex items-center">
             <li class="px-3">
-                <a href="{{ route('budgets') }}">Logo</a>
-            </li>
-            <li class="px-3">
-                <a href="{{ route('budgets') }}">Budgets</a>
+                <a href="/">Logo</a>
             </li>
         </ul>
 
         <ul class="flex items-center">
             @auth
                 <li class="px-3">
-                    <a href="#">User/Username</a>
+                    <a href="">{{ auth()->user()->name }}</a>
                 </li>
                 <li class="px-3">
-                    <form action="" class="p-3 inline">
+                    <a href="{{ route('budgets') }}">Budgets</a>
+                </li>
+                <li class="px-3">
+                    <form action="{{ route('logout') }}" method="post" class="p-3 inline">
+                        @csrf
                         <button type="submit">Logout</button>
                     </form>
                 </li>
