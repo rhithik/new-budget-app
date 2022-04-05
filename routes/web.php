@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BudgetFormController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -19,9 +20,15 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('layouts.app');
-})->name('home');
+});
+
+Route::get('/home', function () {
+    return view('layouts.index');
+});
 
 Route::get('/budgets', [BudgetController::class, 'index'])->name('budgets');
+
+Route::get('/budgetForm', [BudgetFormController::class, 'index'])->name('budgetForm');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
