@@ -11,7 +11,16 @@ class Budget extends Model
     use HasFactory;
 
     protected $fillable = [
-        // '',
+        'month',
+        'pay-frequency',
+        'paycheck1',
+        'paycheck2',
+        'paycheck3',
+        'paycheck4',
+        'paycheck5',
+        'expense',
+        'amount',
+        'paycheck',
         
     ];
 

@@ -29,6 +29,8 @@ Route::get('/home', function () {
 Route::get('/budgets', [BudgetController::class, 'index'])->name('budgets');
 
 Route::get('/budgetForm', [BudgetFormController::class, 'index'])->name('budgetForm');
+Route::post('/budgetForm', [BudgetFormController::class, 'store']);
+Route::delete('/budgetForm/{entry}', [BudgetFormController::class, 'destroy'])->name('entry.destroy');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 

@@ -3,11 +3,11 @@
 @section('content')
     <div class="flex justify-center">
         <div class="w-90 lg:w-8/12 bg-white p-6 mt-6 rounded-lg">
-            <div class="flex justify-center">
-                <form action="" class="">
-
-                    <h2 class="font-bold uppercase text-center mt-4">Budget Month and Pay Frequecy</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center mt-4 border-2">
+            <div class="">
+                <form action="" method="" class="">
+                    
+                    <h2 class="font-bold md:text-xl uppercase text-center mt-4">Budget Month and Pay Frequecy</h2>
+                    <div class="grid grid-cols-1 gap-4 justify-items-center mt-4">
                         <label for="month" class="sr-only">Month</label>
                         <select name="month" id="month" class="form-select rounded w-80">
                             <option value="">Select Month</option>
@@ -32,9 +32,9 @@
                             <option value="">Monthly</option>
                         </select>
                     </div>
-
-                    <h2 class="font-bold uppercase text-center mt-4">Enter Your Paycheck Amount(s)</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center mt-4 border-2">
+                
+                    <h2 class="font-bold uppercase md:text-xl text-center mt-4">Enter Your Paycheck Amount(s)</h2>
+                    <div class="grid grid-cols-1 gap-4 justify-items-center mt-4">
                         
                         <div class="">
                             <label for="paycheck1" class="sr-only">Paycheck 1</label>
@@ -61,10 +61,12 @@
                             <input type="text" name="paycheck5" id="paycheck5" placeholder="$200" class="form-input rounded w-80">
                         </div>
                                                 
+                        <button type="submit" class="btn-info p-2 rounded mt-4 w-80">Save</button>
                     </div>
-
-                    <h2 class="font-bold uppercase text-center mt-4">Expenses</h2>
-                    <div class="mt-4 grid grid-cols-1 gap-4 justify-items-center border-2">
+                </form>
+                <form action="">
+                    <h2 class="font-bold uppercase md:text-xl text-center mt-4">Expenses</h2>
+                    <div class="mt-4 grid grid-cols-1 gap-4 justify-items-center">
                         <div>
                             <label for="expense" class="sr-only">Expense Name</label>
                             <input type="text" name="expense" id="expense" placeholder="Expense Name" class="form-input rounded w-80">
@@ -86,76 +88,38 @@
                                 <option value="">5</option>
                             </select>
                         </div>
-
-                        <button type="submit" class="w-80 bg-blue-400 text-white rounded p-2 mt-4">Add</button>
+                        <button type="submit" class="w-80 rounded btn-info p-2 mt-4">Add</button>
                         
                     </div>
                 </form>
 
                 
             </div>
-            <table class="mx-auto mt-4 table-auto expense-table border-2 border-red-500">
-                <thead class="bg-gray-200 rounded-t">
-                  <tr>
-                    <th
-                      scope="col"
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
-                    >
-                      month
-                    </th>
-                    <th
-                      scope="col"
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
-                    >
-                      name
-                    </th>
-                    <th
-                      scope="col"
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
-                    >
-                      amount
-                    </th>
-                    <th
-                      scope="col"
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
-                    >
-                      paycheck
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-300">
-                  <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="">
-                            <div class="ont-medium text-gray-900">
-                                January
-                            </div>
-                        </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="">
-                            <div class="">
-                                Mortgage
-                            </div>
-                        </div>
-                      </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="">
-                            <span
-                            class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full "
-                            >
-                            &dollar;2100
-                            </span>
-                        </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="">
-                            <p>1</p>
-                        </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        
+                <section class="grid grid-auto-rows max-w-2xl mt-4 mx-auto">
+                    <div class="grid grid-cols-5 bg-gray-300 p-2 uppercase">
+                        <div>Month</div>
+                        <div>Name</div>
+                        <div>Amount</div>
+                        <div>Paycheck</div>
+                        <div>delete</div>
+                    </div>
+                    <div class="grid grid-cols-5 p-2 border-b-2 border-gray-300">
+                        <div>January</div>
+                        <div>Mortgage</div>
+                        <div>&dollar;950</div>
+                        <div>1</div>
+                        <form action="">
+                            <button class="btn btn-error btn-xs">delete</button>
+                        </form>
+                    </div>
+                </section>
+                
+                <div class="w-80 mx-auto">
+                    <form action="" class="">
+                        <button type="submit" class="btn-info p-2 rounded w-80 mt-4 mx-auto">Submit</button>
+                    </form>
+                </div>
         </div>
     </div>
 @endsection()

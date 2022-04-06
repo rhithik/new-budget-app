@@ -7,8 +7,8 @@
     <title>Take Control of Your Money</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body class="bg-gray-100">
-    <nav class="p-6 bg-white flex justify-between">
+<body class="bg-gray-100 text-gray-700">
+    <nav class="p-6 bg-success flex justify-between text-gray-900">
         <ul class="flex items-center">
             <li class="px-3">
                 <a href="/home">Logo</a>
